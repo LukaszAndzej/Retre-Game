@@ -7,6 +7,16 @@ from game.constants import SCREEN_WIDTH, SCREEN_HEIGHT, FPS
 import random
 
 def spawn_enemies(level, screen):
+    """
+    Tworzy listę przeciwników na podstawie poziomu gry.
+
+    Args:
+        level: Numer poziomu gry. Określa liczbę przeciwników.
+        screen: Ekran, na którym przeciwnicy będą rysowani.
+
+    Returns:
+        list: Lista obiektów klasy Enemy reprezentujących przeciwników.
+    """
     enemies = []
     for _ in range(level):
         x = random.randint(0, SCREEN_WIDTH - 80)
@@ -15,6 +25,15 @@ def spawn_enemies(level, screen):
     return enemies
 
 def display_game_over(screen):
+    """
+    Wyświetla komunikat "GAME OVER" na ekranie i czeka na wciśnięcie dowolnego klawisza.
+
+    Args:
+        screen: Ekran, na którym wyświetlany jest komunikat.
+
+    Returns:
+        None
+    """
     font = pygame.font.SysFont(None, 72)
     game_over_text = font.render("GAME OVER", True, (255, 0, 0))
     screen.blit(game_over_text, (SCREEN_WIDTH // 2 - game_over_text.get_width() // 2, SCREEN_HEIGHT // 2 - game_over_text.get_height() // 2))
