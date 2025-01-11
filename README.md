@@ -56,7 +56,7 @@ pip show pygame
 1. Upewnij się, że wszystkie wymagania są zainstalowane.
 2. Pobierz projekt lub sklonuj repozytorium:
    ```bash
-   git clone <url-repozytorium>
+   git clone https://github.com/LukaszAndzej/Retre-Game.git
    cd space_invaders
    ```
 3. Uruchom grę:
